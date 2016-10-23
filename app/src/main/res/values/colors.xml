@@ -4,4 +4,14 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBackground">#29AAE3</color>
+    <color name="colorTitle">#118dc4</color>
+
+    <!--Text colors-->
+    <color name="colorBlack">#000000</color>
+
+    <color name="orange">#EA3b21</color>
+    <color name="white">#ffffff</color>
+    <color name="button_bg_gray">#d7d7d7</color>
+    <color name="text_gray">#9B9B9B</color>
+
 </resources>

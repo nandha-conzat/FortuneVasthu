@@ -1,8 +1,10 @@
-package com.rukina.fortunevasthu;
+package com.rukina.fortunevasthu.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.rukina.fortunevasthu.R;
+import com.rukina.fortunevasthu.fragment.AboutFortuneFragment;
+import com.rukina.fortunevasthu.fragment.AboutVastuFragment;
+import com.rukina.fortunevasthu.fragment.ConsultationFragment;
+import com.rukina.fortunevasthu.fragment.ContactUsFragment;
+import com.rukina.fortunevasthu.fragment.FreeAnalysisFragment;
+import com.rukina.fortunevasthu.fragment.NotificationFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +50,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        loadPage();
     }
 
     @Override
@@ -79,23 +91,55 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Fragment fragment = null;
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_about_vastu) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            fragment = new AboutVastuFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flContent, fragment);
+            ft.commit();
+        } else if (id == R.id.nav_fortune) {
+            fragment = new AboutFortuneFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flContent, fragment);
+            ft.commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_free_analysis) {
+            fragment = new FreeAnalysisFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flContent, fragment);
+            ft.commit();
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_consult) {
+            fragment = new ConsultationFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flContent, fragment);
+            ft.commit();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_notification) {
+            fragment = new NotificationFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flContent, fragment);
+            ft.commit();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_contact_us) {
+            fragment = new ContactUsFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flContent, fragment);
+            ft.commit();
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void loadPage() {
+        Fragment fragment = new AboutVastuFragment();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.flContent, fragment);
+        ft.commit();
     }
 }

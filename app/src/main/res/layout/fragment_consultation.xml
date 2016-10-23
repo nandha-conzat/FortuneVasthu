@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorBackground"
+        android:padding="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvtitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:fontFamily="monospace"
+                android:background="@color/colorTitle"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/consultation_title"/>
+
+            <TextView
+                android:id="@+id/tvconsultation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:layout_below="@id/tvtitle"
+                android:gravity="center"
+                android:text="Select Consultation"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <Spinner
+                android:id="@+id/consultationspinner"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvconsultation"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:textSize="15sp"></Spinner>
+
+            <TextView
+                android:id="@+id/tvconsulttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/consultationspinner"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="Consultation Type"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <Spinner
+                android:id="@+id/consultationtypespinner"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvconsulttype"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:textSize="15sp"></Spinner>
+
+            <TextView
+                android:id="@+id/tvname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/consultationtypespinner"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <EditText
+                android:id="@+id/editText_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvname"
+                android:background="@drawable/button_rounded_white_gray_border"
+                android:hint="@string/hint_name"
+                android:inputType="text"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/editText_name"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="Address"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <EditText
+                android:id="@+id/editText_address"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/tvaddress"
+                android:background="@drawable/button_rounded_white_gray_border"
+                android:hint="Address"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvcontactno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/editText_address"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="Contact No"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <EditText
+                android:id="@+id/editText_contactno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvcontactno"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:background="@drawable/button_rounded_white_gray_border"
+                android:hint="Contact no"
+                android:inputType="number"
+                android:digits="0123456789+"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvmailid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/editText_contactno"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="Mail Id"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <EditText
+                android:id="@+id/editText_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvmailid"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:background="@drawable/button_rounded_white_gray_border"
+                android:hint="Mail Id"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvdrawing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/editText_email"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="House Drawing"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <EditText
+                android:id="@+id/editText_drawing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvdrawing"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:background="@drawable/button_rounded_white_gray_border"
+                android:hint="House Drawing"
+                android:enabled="false"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvlatnorth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/editText_drawing"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="Latitude (Northing) of House"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <EditText
+                android:id="@+id/editText_latnorth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvlatnorth"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:background="@drawable/button_rounded_white_gray_border"
+                android:hint="Latitude (Northing) of House"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvlongeast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/editText_latnorth"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="Longitude(Easting) of House"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <EditText
+                android:id="@+id/editText_longeast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvlongeast"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:background="@drawable/button_rounded_white_gray_border"
+                android:hint="Longitude(Easting) of House"
+                android:inputType="numberDecimal"
+                android:digits="0123456789."
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvpayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/editText_longeast"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:gravity="center"
+                android:text="Payment Options"
+                android:textColor="@color/white"
+                android:textSize="@dimen/actionbarTextSize" />
+
+            <EditText
+                android:id="@+id/editText_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvpayment"
+                android:layout_marginBottom="@dimen/mainmargin"
+                android:background="@drawable/button_rounded_white_gray_border"
+                android:hint="Payment Type"
+                android:inputType="text"
+                android:enabled="false"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

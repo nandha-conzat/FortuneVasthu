@@ -1,8 +1,38 @@
 <resources>
-    <string name="app_name">FortuneVasthu</string>
+    <string name="app_name">Fortune Vastu</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- About Vastu-->
+    <string name="about_vastu_title">About Vastu</string>
+    <string name="about_vastu">\t\tThe basic five elements of nature ie, Earth,Water,Fire,Air &amp; the space all belong and rule a particular direction. Building houses by implementing this principle is known as vastu shastra.\n\n
+	\t\tHuman body itself is a combination of these five basic elements. If we handle this five elements effectively by living along with nature we will  be happy for ever.\n\n
+There are so many tactics like \n\n\t\tAstrology,Nuemerology,Namology etc., that are implied in our life to make it happy and healthy but above all these the challenging factor is that a house built with perfect vastu shastra principles only can fulfill all our expectations.
+</string>
+
+    <!-- About Fortune Vastu-->
+    <string name="about_fortune_title">About Fortune Vastu</string>
+    <string name="about_fortune">The human always wish for the permanent existence of a good dwelling place, wealth,Health,Fame,Good relationships in our life .
+\n\nWe fortune vastu providing the complete  life solution  to attain and acquire all your golden dreams in your life
+</string>
+
+    <!-- Notification-->
+    <string name="notification_title">Welcome</string>
+    <string name="notification">\t\tThanks for subscribed Fortune Vastu.. You will get free tips, free eBooks and much more.
+</string>
+
+    <!-- Consultation-->
+    <string name="consultation_title">Vastu Consultation</string>
+
+    <!-- Contact Us-->
+    <string name="contact_us_title">Contact Us</string>
+
+    <!-- Get Free Analysis-->
+    <string name="free_analysis_title">Get free analysis of your home</string>
+    <string name="free_analysis_info">Please tick the direction of the room</string>
+
+    <string name="hint_name">\tName</string>
 </resources>
