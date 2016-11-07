@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //
         setSupportActionBar(toolbar);
 // //
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -137,7 +138,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void loadPage() {
-        Fragment fragment = new AboutVastuFragment();
+        Fragment fragment = new FreeAnalysisFragment();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.flContent, fragment);
         ft.commit();
