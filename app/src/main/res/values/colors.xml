@@ -13,5 +13,6 @@
     <color name="white">#ffffff</color>
     <color name="button_bg_gray">#d7d7d7</color>
     <color name="text_gray">#9B9B9B</color>
+    <color name="buttont_bg_blue">#2878e9</color>
 
 </resources>
