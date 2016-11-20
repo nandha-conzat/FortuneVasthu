@@ -11,6 +11,15 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Please select direction of your home / \nGet free analysis vasthu report"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
         <android.support.v7.widget.CardView
             android:id="@+id/android_card_view_example"
             android:layout_width="match_parent"
@@ -28,9 +37,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/main_entrance" />
+
+
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -55,11 +66,52 @@
                         android:id="@+id/ll_mainentrance"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
                         android:layout_below="@+id/tvconsultation"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -99,7 +151,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -126,7 +181,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/hall" />
 
@@ -158,7 +213,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -198,7 +294,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
 
                     </LinearLayout>
@@ -224,7 +323,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/kitchen" />
 
@@ -256,7 +355,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -296,7 +436,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
 
                     </LinearLayout>
@@ -322,7 +465,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/master_bed_room" />
 
@@ -354,7 +497,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -394,7 +578,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
 
                     </LinearLayout>
@@ -420,7 +607,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bedroom" />
 
@@ -452,7 +639,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -492,7 +720,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -517,7 +748,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/pooja_room" />
 
@@ -549,7 +780,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -589,7 +861,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
 
                     </LinearLayout>
@@ -615,7 +890,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/bathroom" />
 
@@ -647,7 +922,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -687,7 +1003,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
 
                     </LinearLayout>
@@ -713,7 +1032,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/portico" />
 
@@ -745,7 +1064,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -785,7 +1145,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
 
                     </LinearLayout>
@@ -811,7 +1174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/car_parking" />
 
@@ -844,7 +1207,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -884,7 +1288,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
 
                     </LinearLayout>
@@ -910,7 +1317,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/staircase" />
 
@@ -942,7 +1349,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -982,7 +1430,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
 
                     </LinearLayout>
@@ -1009,7 +1460,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/sump" />
 
@@ -1041,7 +1492,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -1081,7 +1573,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1106,7 +1601,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/septic" />
 
@@ -1138,7 +1633,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -1178,7 +1714,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1203,7 +1742,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/compound_wall" />
 
@@ -1235,7 +1774,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -1275,7 +1855,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1300,7 +1883,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/road" />
 
@@ -1332,7 +1915,48 @@
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
-                        <CheckBox
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="SW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="NW"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10dp" />
+                        </RadioGroup>
+
+                        <!--<CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -1372,7 +1996,10 @@
                             android:layout_weight="0.25"
                             android:text="SE"
                             android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
+                            android:textSize="10dp" />-->
+
+
+                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1387,7 +2014,7 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="@color/buttont_bg_blue"
+            android:background="@color/colorPrimary"
             android:padding="5dp"
             android:text="Get Report"
             android:textColor="@color/white" />
