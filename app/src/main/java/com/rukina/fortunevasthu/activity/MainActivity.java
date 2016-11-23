@@ -121,6 +121,12 @@ public class MainActivity extends AppCompatActivity
             ft.replace(R.id.flContent, fragment);
             ft.commit();
 
+        } else if (id == R.id.nav_services) {
+            fragment = new NotificationFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flContent, fragment);
+            ft.commit();
+
         } else if (id == R.id.nav_notification) {
             fragment = new NotificationFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
