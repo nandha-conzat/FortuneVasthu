@@ -27,6 +27,7 @@ public class FreeAnalysisFragment extends Fragment {
     private RadioGroup radioMainEntranceGroup, radioHallGroup, radioKitchenGroup, radioMasterBedRoomGroup, radioBedRoomGroup,
             radioPoojaRoomGroup, radioBathGroup, radioPorticoGroup, radioCarParkingGroup, radioStairCaseGroup, radioSumpGroup,
             radioSepticTankGroup, radioCompoundWallGroup, radioRoadGroup;
+
     private Button btnGenerateReport;
 
     @Nullable

@@ -8,11 +8,12 @@
 
     <!--Text colors-->
     <color name="colorBlack">#000000</color>
-
+    <color name="common_signin_btn_dark_text_default">@android:color/white</color>
     <color name="orange">#EA3b21</color>
     <color name="white">#ffffff</color>
     <color name="button_bg_gray">#d7d7d7</color>
     <color name="text_gray">#9B9B9B</color>
     <color name="buttont_bg_blue">#2878e9</color>
+    <color name="url_color">#70a0d4</color>
 
 </resources>
