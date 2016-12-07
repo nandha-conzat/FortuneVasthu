@@ -7,6 +7,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.rukina.fortunevasthu.R;
 
@@ -29,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
 
         init();
+
+        Toast.makeText(getApplicationContext(), "Please register to get the vasthu report !", Toast.LENGTH_LONG).show();
     }
 
     private void init()

@@ -1,5 +1,6 @@
 package com.rukina.fortunevasthu.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.rukina.fortunevasthu.R;
+import com.rukina.fortunevasthu.activity.LoginActivity;
 
 /**
  * Created by Nandha on 23-10-2016.
@@ -86,7 +88,7 @@ public class FreeAnalysisFragment extends Fragment {
                 RadioButton radioWallButton = (RadioButton) rootView.findViewById(selectedId_Wall);
                 RadioButton radioRoadButton = (RadioButton) rootView.findViewById(selectedId_Road);
 
-                Toast.makeText(getActivity(), "Main Ent :" + radioMainEntranceButton.getText() +
+               /* Toast.makeText(getActivity(), "Main Ent :" + radioMainEntranceButton.getText() +
                         "Hall :" + radioHallButton.getText() +
                         "Kitchen :" + radioKitchenButton.getText() +
                         "Master Bed :" + radioMasterBedRoomButton.getText() +
@@ -99,7 +101,11 @@ public class FreeAnalysisFragment extends Fragment {
                         "Sump :" + radioSumpButton.getText() +
                         "Septic :" + radioSepticButton.getText() +
                         "Wall :" + radioWallButton.getText() +
-                        "Road :" + radioRoadButton.getText(), Toast.LENGTH_SHORT).show();
+                        "Road :" + radioRoadButton.getText(), Toast.LENGTH_SHORT).show(); */
+
+                Intent myIntent = new Intent(getActivity(), LoginActivity.class);
+                getActivity().startActivity(myIntent);
+
             }
         });
 

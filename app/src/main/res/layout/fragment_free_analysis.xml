@@ -20,6 +20,18 @@
             android:textSize="16dp"
             android:textStyle="bold" />
 
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
+            android:background="@color/orange"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="10dp"
+            android:text="Please select direction of your home / \nGet free analysis vasthu report"
+            android:textSize="16dp"
+            android:textStyle="bold" />-->
+
         <android.support.v7.widget.CardView
             android:id="@+id/android_card_view_example"
             android:layout_width="match_parent"
@@ -79,8 +91,8 @@
                                 android:id="@+id/radioNE_ME"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -213,8 +225,8 @@
                         android:id="@+id/ll_hall"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvhall"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvhall"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -229,8 +241,8 @@
                                 android:id="@+id/radioNE_Hall"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -362,8 +374,8 @@
                         android:id="@+id/ll_kitchen"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvkitchen"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvkitchen"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -378,8 +390,8 @@
                                 android:id="@+id/radioNE_Kitchen"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -527,8 +539,8 @@
                                 android:id="@+id/radioNE_MasterBed"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -660,8 +672,8 @@
                         android:id="@+id/ll_bedroom"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvbedroom"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvbedroom"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -676,8 +688,8 @@
                                 android:id="@+id/radioNE_BedRoom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -808,8 +820,8 @@
                         android:id="@+id/ll_poojaroom"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvpoojaroom"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvpoojaroom"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -824,8 +836,8 @@
                                 android:id="@+id/radioNE_PoojaRoom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -957,8 +969,8 @@
                         android:id="@+id/ll_bathtoilet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvbathtoilet"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvbathtoilet"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -973,8 +985,8 @@
                                 android:id="@+id/radioNE_Bath"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1106,8 +1118,8 @@
                         android:id="@+id/ll_portico"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvportico"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvportico"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -1122,8 +1134,8 @@
                                 android:id="@+id/radioNE_Portico"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1255,8 +1267,8 @@
                         android:id="@+id/ll_carpark"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvcarpark"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvcarpark"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -1271,8 +1283,8 @@
                                 android:id="@+id/radioNE_CarPark"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1404,8 +1416,8 @@
                         android:id="@+id/ll_staircase"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvstaircase"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvstaircase"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -1420,8 +1432,8 @@
                                 android:id="@+id/radioNE_StairCase"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1554,8 +1566,8 @@
                         android:id="@+id/ll_bore"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvbore"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvbore"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -1570,8 +1582,8 @@
                                 android:id="@+id/radioNE_Sump"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1702,8 +1714,8 @@
                         android:id="@+id/ll_septictank"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvseptictank"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvseptictank"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -1718,8 +1730,8 @@
                                 android:id="@+id/radioNE_Septic"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1850,8 +1862,8 @@
                         android:id="@+id/ll_wall"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvwall"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvwall"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -1866,8 +1878,8 @@
                                 android:id="@+id/radioNE_Wall"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1998,8 +2010,8 @@
                         android:id="@+id/ll_road"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvroad"
                         android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvroad"
                         android:layout_marginBottom="@dimen/mainmargin"
                         android:orientation="horizontal">
 
@@ -2014,8 +2026,8 @@
                                 android:id="@+id/radioNE_Road"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="NE"
                                 android:checked="true"
+                                android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
