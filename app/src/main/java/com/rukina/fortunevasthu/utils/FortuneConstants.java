@@ -19,4 +19,5 @@ public class FortuneConstants {
     public static String ALERT_DIALOG_INPUT_HINT = "alert_dialog_input_hint";
     public static String ALERT_DIALOG_POS_BUTTON = "alert_dialog_pos_button";
     public static String ALERT_DIALOG_NEG_BUTTON = "alert_dialog_neg_button";
+
 }

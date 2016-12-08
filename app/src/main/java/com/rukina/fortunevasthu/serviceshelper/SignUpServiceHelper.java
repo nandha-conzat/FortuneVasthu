@@ -13,6 +13,7 @@ import com.rukina.fortunevasthu.activity.MainActivity;
 import com.rukina.fortunevasthu.app.AppController;
 import com.rukina.fortunevasthu.serviceinterfaces.IServiceListener;
 import com.rukina.fortunevasthu.serviceinterfaces.ISignUpServiceListener;
+import com.rukina.fortunevasthu.utils.Config;
 import com.rukina.fortunevasthu.utils.FortuneConstants;
 
 
@@ -36,6 +37,53 @@ public class SignUpServiceHelper {
 
     public void setSignUpServiceListener(ISignUpServiceListener signUpServiceListener) {
         this.signUpServiceListener = signUpServiceListener;
+    }
+
+    public void makeGetEventServiceCall(String URL) {
+        Log.d(TAG, "Events URL " + URL);
+        final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                URL, (String) null,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d(TAG, "ajaz : " + response.toString());
+                        if(response != null) {
+                            signUpServiceListener.onSignUp(response);
+                        }
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d(TAG, "error is" + error.getLocalizedMessage());
+                if (error.networkResponse != null && error.networkResponse.data != null) {
+
+                    try {
+                        String responseBody = new String(error.networkResponse.data, "utf-8");
+                        Log.d(TAG, "error response body is" + responseBody);
+                        JSONObject jsonObject = new JSONObject(responseBody);
+                        signUpServiceListener.onSignUpError(jsonObject.getString(Config.PARAM_MESSAGE));
+                    } catch (UnsupportedEncodingException e) {
+                        signUpServiceListener.onSignUpError(context.getResources().getString(R.string.error_occured));
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        signUpServiceListener.onSignUpError(context.getResources().getString(R.string.error_occured));
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    signUpServiceListener.onSignUpError(context.getResources().getString(R.string.error_occured));
+                }
+            }
+        });
+
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        // Adding request to request queue
+        AppController.getInstance().addToRequestQueue(jsonObjectRequest);
+
+
     }
 
     public void updateUserProfile(String url, final IServiceListener listener){

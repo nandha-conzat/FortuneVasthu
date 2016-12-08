@@ -40,4 +40,10 @@ There are so many tactics like \n\n\t\tAstrology,Nuemerology,Namology etc., that
     <string name="alert_button_ok">Ok</string>
     <string name="alert_button_cancel">Cancel</string>
     <string name="error_occured">Failed to connect to the server. Please try again.</string>
+
+    <string name="fill_name">Fill the name</string>
+    <string name="fill_mobileno">Fill the mobile no</string>
+    <string name="fill_email">Fill the email</string>
+
+    <string name="progress_loading">Loading...</string>
 </resources>

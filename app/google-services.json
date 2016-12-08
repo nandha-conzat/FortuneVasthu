@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "789502099085",
+    "firebase_url": "https://fortunevasthu.firebaseio.com",
+    "project_id": "fortunevasthu",
+    "storage_bucket": "fortunevasthu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789502099085:android:7329e2cdb3d0ce72",
+        "android_client_info": {
+          "package_name": "com.rukina.fortunevasthu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789502099085-5rr3ie1r6uido78shbab99p29os6bqg9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rukina.fortunevasthu",
+            "certificate_hash": "01C145F658E576A6C2E517A98372462AF2B352D4"
+          }
+        },
+        {
+          "client_id": "789502099085-4j2bm7bvk3p2notfmgbnq58ddld61qcm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789502099085-4j2bm7bvk3p2notfmgbnq58ddld61qcm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
