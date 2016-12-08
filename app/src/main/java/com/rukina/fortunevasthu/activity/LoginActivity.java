@@ -196,10 +196,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     } catch (UnsupportedEncodingException ex) {
                         ex.printStackTrace();
                     }
-
-
-
                 }
+
             } else if (view == _Clear) {
                 _Name.setText("");
                 _Mobile.setText("");
