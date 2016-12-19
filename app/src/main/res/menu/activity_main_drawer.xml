@@ -16,7 +16,7 @@
             android:title="Consultation" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Our Services">
         <menu>
             <item
                 android:id="@+id/nav_services"

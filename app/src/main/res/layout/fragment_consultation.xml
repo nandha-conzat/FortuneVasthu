@@ -19,25 +19,25 @@
                 android:id="@+id/tvtitle"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:fontFamily="monospace"
-                android:background="@color/orange"
-                android:gravity="center"
-                android:layout_marginTop="1dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/consultation_title"/>
+                android:layout_marginTop="1dp"
+                android:background="@color/orange"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="@string/consultation_title"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvconsultation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginBottom="@dimen/mainmargin"
                 android:layout_below="@id/tvtitle"
+                android:layout_marginBottom="@dimen/mainmargin"
                 android:gravity="center"
-                android:text="Select Consultation"
+                android:text="Consultation Type"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/actionbarTextSize" />
 
@@ -50,238 +50,298 @@
                 android:layout_marginBottom="@dimen/mainmargin"
                 android:textSize="15sp"></Spinner>
 
-            <TextView
-                android:id="@+id/tvconsulttype"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/consultationspinner"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:gravity="center"
-                android:text="Consultation Type"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
-
-            <Spinner
-                android:id="@+id/consultationtypespinner"
-                style="@style/spinner_style"
+            <LinearLayout
+                android:id="@+id/llTelecall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tvconsulttype"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:textSize="15sp"></Spinner>
-
-            <TextView
-                android:id="@+id/tvname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/consultationtypespinner"
-                android:layout_marginBottom="@dimen/mainmargin"
+                android:layout_below="@+id/consultationspinner"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="Name"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <EditText
-                android:id="@+id/editText_name"
+                <TextView
+                    android:id="@+id/txtTelecallingno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:text="+91 9361686786"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnCallus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/btn_green"
+                    android:text="Call Us"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOnline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tvname"
-                android:background="@drawable/button_rounded_white_gray_border"
-                android:hint="@string/hint_name"
-                android:inputType="text"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textColorHint="@color/text_gray"
-                android:textSize="14sp" />
+                android:layout_below="@+id/llTelecall"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
 
-            <TextView
-                android:id="@+id/tvaddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/editText_name"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:gravity="center"
-                android:text="Address"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
+                <TextView
+                    android:id="@+id/tvname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:gravity="center"
+                    android:text="Name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/actionbarTextSize" />
 
-            <EditText
-                android:id="@+id/editText_address"
+                <EditText
+                    android:id="@+id/editText_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvname"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:background="@drawable/button_rounded_white_gray_border"
+                    android:hint="@string/hint_name"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editText_name"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:gravity="center"
+                    android:text="Address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/actionbarTextSize" />
+
+                <EditText
+                    android:id="@+id/editText_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/tvaddress"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:background="@drawable/button_rounded_white_gray_border"
+                    android:hint="Address"
+                    android:inputType="textMultiLine"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvcontactno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editText_address"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:gravity="center"
+                    android:text="Contact No"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/actionbarTextSize" />
+
+                <EditText
+                    android:id="@+id/editText_contactno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvcontactno"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:background="@drawable/button_rounded_white_gray_border"
+                    android:digits="0123456789+"
+                    android:hint="Contact no"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvmailid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editText_contactno"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:gravity="center"
+                    android:text="Mail Id"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/actionbarTextSize" />
+
+                <EditText
+                    android:id="@+id/editText_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvmailid"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:background="@drawable/button_rounded_white_gray_border"
+                    android:hint="Mail Id"
+                    android:inputType="textEmailAddress"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvdrawing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editText_email"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:gravity="center"
+                    android:text="House Drawing"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/actionbarTextSize" />
+
+                <EditText
+                    android:id="@+id/editText_drawing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvdrawing"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:background="@drawable/button_rounded_white_gray_border"
+                    android:enabled="false"
+                    android:hint="House Drawing"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvlatnorth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editText_drawing"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:gravity="center"
+                    android:text="Latitude (Northing) of House"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/actionbarTextSize" />
+
+                <EditText
+                    android:id="@+id/editText_latnorth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvlatnorth"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:background="@drawable/button_rounded_white_gray_border"
+                    android:digits="0123456789."
+                    android:hint="Latitude (Northing) of House"
+                    android:inputType="numberDecimal"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvlongeast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editText_latnorth"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:gravity="center"
+                    android:text="Longitude(Easting) of House"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/actionbarTextSize" />
+
+                <EditText
+                    android:id="@+id/editText_longeast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvlongeast"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:background="@drawable/button_rounded_white_gray_border"
+                    android:digits="0123456789."
+                    android:hint="Longitude(Easting) of House"
+                    android:inputType="numberDecimal"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvpayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editText_longeast"
+                    android:layout_marginBottom="@dimen/mainmargin"
+                    android:gravity="center"
+                    android:text="Payment Options"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/actionbarTextSize" />
+
+                <EditText
+                    android:id="@+id/editText_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvpayment"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_rounded_white_gray_border"
+                    android:enabled="false"
+                    android:hint="Payment Type"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/btn_green"
+                    android:text="Submit"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOffline"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@id/tvaddress"
-                android:background="@drawable/button_rounded_white_gray_border"
-                android:hint="Address"
-                android:inputType="textMultiLine"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textColorHint="@color/text_gray"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tvcontactno"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/editText_address"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:gravity="center"
-                android:text="Contact No"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
+                android:layout_below="@+id/llOnline"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/button_bg_gray"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <EditText
-                android:id="@+id/editText_contactno"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvcontactno"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:background="@drawable/button_rounded_white_gray_border"
-                android:hint="Contact no"
-                android:inputType="number"
-                android:digits="0123456789+"
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textColorHint="@color/text_gray"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tvmailid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/editText_contactno"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:gravity="center"
-                android:text="Mail Id"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
-
-            <EditText
-                android:id="@+id/editText_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvmailid"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:background="@drawable/button_rounded_white_gray_border"
-                android:hint="Mail Id"
-                android:inputType="textEmailAddress"
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textColorHint="@color/text_gray"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tvdrawing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/editText_email"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:gravity="center"
-                android:text="House Drawing"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
-
-            <EditText
-                android:id="@+id/editText_drawing"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvdrawing"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:background="@drawable/button_rounded_white_gray_border"
-                android:hint="House Drawing"
-                android:enabled="false"
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textColorHint="@color/text_gray"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tvlatnorth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/editText_drawing"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:gravity="center"
-                android:text="Latitude (Northing) of House"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
-
-            <EditText
-                android:id="@+id/editText_latnorth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvlatnorth"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:background="@drawable/button_rounded_white_gray_border"
-                android:hint="Latitude (Northing) of House"
-                android:inputType="numberDecimal"
-                android:digits="0123456789."
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textColorHint="@color/text_gray"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tvlongeast"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/editText_latnorth"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:gravity="center"
-                android:text="Longitude(Easting) of House"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
-
-            <EditText
-                android:id="@+id/editText_longeast"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvlongeast"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:background="@drawable/button_rounded_white_gray_border"
-                android:hint="Longitude(Easting) of House"
-                android:inputType="numberDecimal"
-                android:digits="0123456789."
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textColorHint="@color/text_gray"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tvpayment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/editText_longeast"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:gravity="center"
-                android:text="Payment Options"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/actionbarTextSize" />
-
-            <EditText
-                android:id="@+id/editText_payment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvpayment"
-                android:layout_marginBottom="@dimen/mainmargin"
-                android:background="@drawable/button_rounded_white_gray_border"
-                android:hint="Payment Type"
-                android:inputType="text"
-                android:enabled="false"
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textColorHint="@color/text_gray"
-                android:textSize="14sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="3dp"
+                    android:text="@string/fortune_address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
         </RelativeLayout>
     </ScrollView>

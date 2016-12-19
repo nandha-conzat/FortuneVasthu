@@ -47,14 +47,17 @@
             android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeNoActionBarGrey">
-        </activity>
+            android:theme="@style/AppThemeNoActionBarGrey"></activity>
         <activity
             android:name=".activity.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppFullScreenTheme">
-        </activity>
+            android:theme="@style/AppFullScreenTheme"></activity>
+        <activity
+            android:name=".activity.FreeReportActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppFullScreenTheme"></activity>
     </application>
 
 </manifest>

@@ -46,4 +46,20 @@ There are so many tactics like \n\n\t\tAstrology,Nuemerology,Namology etc., that
     <string name="fill_email">Fill the email</string>
 
     <string name="progress_loading">Loading...</string>
+
+    <string-array name="consultation_type">
+        <item>Please Select</item>
+        <item>Tele Calling</item>
+        <item>Online</item>
+        <item>Offline</item>
+    </string-array>
+
+    <string name="fortune_address">The fortune Vasthu\nRoom no : 4\nDev towers\nRam nagar\nGandhi gramam\nKarur dist
+        \nTamilnadu - 639004\n\n\nContact no : \n+91 9361686786 \n+91 9842944929\n\nWebsite : \nwww.thefortunevasthu.com
+        \n\nMail id : \ninfo@thefortunevasthu.com</string>
+
+    <string name="fortune_services">List of services\n\n\n1.Site selection\n\n2.Building solutions\n\n3.Plan and designing\n\n4.Water management
+        \n\n5.Money Magic  Class\n\n6.Self motivation class\n\n7.Vathu solution class\n</string>
+
+
 </resources>

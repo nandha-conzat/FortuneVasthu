@@ -23,6 +23,7 @@ import com.rukina.fortunevasthu.fragment.ConsultationFragment;
 import com.rukina.fortunevasthu.fragment.ContactUsFragment;
 import com.rukina.fortunevasthu.fragment.FreeAnalysisFragment;
 import com.rukina.fortunevasthu.fragment.NotificationFragment;
+import com.rukina.fortunevasthu.fragment.ServicesFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity
             ft.commit();
 
         } else if (id == R.id.nav_services) {
-            fragment = new NotificationFragment();
+            fragment = new ServicesFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flContent, fragment);
             ft.commit();

@@ -15,5 +15,6 @@
     <color name="text_gray">#9B9B9B</color>
     <color name="buttont_bg_blue">#2878e9</color>
     <color name="url_color">#70a0d4</color>
+    <color name="btn_green">#228f14</color>
 
 </resources>

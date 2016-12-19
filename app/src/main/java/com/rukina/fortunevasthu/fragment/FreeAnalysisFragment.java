@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.rukina.fortunevasthu.R;
+import com.rukina.fortunevasthu.activity.FreeReportActivity;
 import com.rukina.fortunevasthu.activity.LoginActivity;
 
 /**
@@ -103,7 +104,7 @@ public class FreeAnalysisFragment extends Fragment {
                         "Wall :" + radioWallButton.getText() +
                         "Road :" + radioRoadButton.getText(), Toast.LENGTH_SHORT).show(); */
 
-                Intent myIntent = new Intent(getActivity(), LoginActivity.class);
+                Intent myIntent = new Intent(getActivity(), FreeReportActivity.class);
                 getActivity().startActivity(myIntent);
 
             }
