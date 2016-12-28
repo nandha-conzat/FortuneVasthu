@@ -80,8 +80,9 @@
                                 android:id="@+id/radioNE_ME"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
+                                android:textColorHighlight="@color/btn_green"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -92,6 +93,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -102,6 +104,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -112,6 +115,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -121,10 +125,12 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkMainEntrance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_below="@+id/rlMainEntrance"
+                    android:visibility="gone"
                     android:layout_marginBottom="@dimen/mainmargin"
                     android:layout_marginLeft="68dp"
                     android:orientation="vertical">
@@ -136,6 +142,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Kidney, Liver, Heart, Reproductive systems"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -147,6 +155,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - VRS, Not Permanent job &amp; Abroad"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -158,6 +168,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Husband wife relationship issue, Male Disturb"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -169,6 +181,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - Mental Worries, Economical problem"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -242,7 +256,7 @@
                                 android:id="@+id/radioNE_Hall"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -254,6 +268,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -264,6 +279,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -274,6 +290,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -282,6 +299,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkHall"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -297,6 +316,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Kidney, Liver, Heart, Reproductive systems"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -308,6 +329,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - VRS, Not Permanent job &amp; Abroad"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -319,6 +342,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Husband wife relationship issue, Third Person intruption"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -330,6 +355,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - Mental Torcher, Economical problem"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -401,7 +428,7 @@
                                 android:id="@+id/radioNE_Kitchen"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -413,6 +440,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -423,6 +451,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -433,6 +462,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -441,6 +471,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkKitchen"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -456,6 +488,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Accident, Lungs, Headache, Asthma &amp; Brain Tumer"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -467,6 +501,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Poor income, Credit "
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -478,6 +514,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Father - Son/Daughter relationship issue, Male honesty will affect"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -489,6 +527,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - No job, No regular income"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -560,8 +600,8 @@
                                 android:id="@+id/radioNE_MasterBed"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -572,6 +612,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -582,6 +623,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -592,6 +634,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -600,6 +643,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkMasterBed"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -615,6 +660,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Uterus, Low Blood Count, Abortion, Open heart surgery"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -626,6 +673,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Low income, Irregular income"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -637,6 +686,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Husband wife relationship issue"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -648,6 +699,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - Average Business, Abroad job, VRS"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -719,7 +772,7 @@
                                 android:id="@+id/radioNE_BedRoom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -731,6 +784,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -741,6 +795,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -751,6 +806,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -759,6 +815,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkBed"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -774,6 +832,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Memory power problem, Vision, Migrane headache"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -785,6 +845,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - No income"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -796,6 +858,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Love Marriage, Study Discontinue"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -807,6 +871,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="No suitable job"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -878,7 +944,7 @@
                                 android:id="@+id/radioNE_PoojaRoom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -890,6 +956,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -900,6 +967,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -910,6 +978,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -918,6 +987,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkPoojaRoom"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -933,6 +1004,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Eye, Headache, Observation, Accident"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -944,6 +1017,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Loan, Transaction Issues, Low income"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -955,6 +1030,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Mental Problem, Husband wife relationship issue"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -966,6 +1043,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - VRS, Not Permanent job &amp; Abroad"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1037,7 +1116,7 @@
                                 android:id="@+id/radioNE_Bath"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1049,6 +1128,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1059,6 +1139,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1069,6 +1150,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -1077,6 +1159,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkBath"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -1092,6 +1176,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Diabetic, Neuro, Ortho, Heart, Uterus, GB problems"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1103,6 +1189,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Loan, Transaction Issues, Low income"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1114,6 +1202,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Marriage issue, Husband - Wife relation ship issue"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1125,6 +1215,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - VRS, Delay Promotion, Incomplete business"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1196,7 +1288,7 @@
                                 android:id="@+id/radioNE_Portico"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1208,6 +1300,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1218,6 +1311,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1228,6 +1322,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -1236,6 +1331,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkPortico"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -1251,6 +1348,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Kidney, Liver, Heart, Sugar, Mental issues"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1262,6 +1361,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Credit, Poor Income, Loan"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1273,6 +1374,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - One Generation House"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1284,6 +1387,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - Economical problem, Permanent Abroad job"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1355,7 +1460,7 @@
                                 android:id="@+id/radioNE_CarPark"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1367,6 +1472,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1377,6 +1483,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1387,6 +1494,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -1395,6 +1503,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkCarParking"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -1410,6 +1520,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Accident, Headache, Mental Worries"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1421,6 +1533,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - VRS,Not Permanent job &amp; Abroad"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1432,6 +1546,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Father - Son/Daughter relationship issue, Abroad"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1443,6 +1559,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - Low profit, Poor order, No Permanent job"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1514,7 +1632,7 @@
                                 android:id="@+id/radioNE_StairCase"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1526,6 +1644,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1536,6 +1655,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1546,6 +1666,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -1554,6 +1675,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkStairCase"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -1569,6 +1692,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Headche, Asthma, Mental Stress, Vision, Observation issue"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1580,6 +1705,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Over Credit, Transactions, Money Loss"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1591,6 +1718,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Father - Son/Daughter relationship issue, Koma Satge house"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1602,6 +1731,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - Business suddenly drop, Frequent Transfer for Job"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1674,7 +1805,7 @@
                                 android:id="@+id/radioNE_Sump"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1686,6 +1817,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1696,6 +1828,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1706,6 +1839,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -1714,6 +1848,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkSump"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -1729,6 +1865,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Uterus, Low Blood Count, Kidney, Heart issues"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1740,6 +1878,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Poor income, Over credit"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1751,6 +1891,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Relationship issue"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1762,6 +1904,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - Low production, No sales, Low profit, Low income"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1833,7 +1977,7 @@
                                 android:id="@+id/radioNE_Septic"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1845,6 +1989,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1855,6 +2000,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -1865,6 +2011,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -1873,6 +2020,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkSeptic"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -1888,6 +2037,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Uterus, Low Blood Count, Kidney, Heart issues"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1899,6 +2050,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Poor income, Over credit"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1910,6 +2063,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Relationship issue"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1921,6 +2076,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - Low production, No sales, Low profit, Low income"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -1992,7 +2149,7 @@
                                 android:id="@+id/radioNE_Wall"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
+                                android:enabled="false"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -2004,6 +2161,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -2014,6 +2172,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -2024,6 +2183,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -2032,6 +2192,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkWall"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -2047,6 +2209,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - East compound good health"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -2058,6 +2222,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - North Compound Good income"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -2069,6 +2235,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - South compound save the family"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -2080,6 +2248,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - West compound safe the business"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -2151,8 +2321,8 @@
                                 android:id="@+id/radioNE_Road"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -2163,6 +2333,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SE"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -2173,6 +2344,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="SW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
 
@@ -2183,6 +2355,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="NW"
+                                android:enabled="false"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
@@ -2191,6 +2364,8 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/llchkRoad"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -2206,6 +2381,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Health - Kidney, Liver, Spinal Card, Heart issues"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -2217,6 +2394,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Money - Financial Loss"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -2228,6 +2407,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Family - Illegal habits, Mental problem, Husband - Wife issue"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />
@@ -2239,6 +2420,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="0.25"
+                        android:checked="true"
+                        android:enabled="false"
                         android:text="Business/Job - VRS, Pension, Frequent Transfer job, Delay Promotion"
                         android:textColor="@color/colorBlack"
                         android:textSize="10dp" />

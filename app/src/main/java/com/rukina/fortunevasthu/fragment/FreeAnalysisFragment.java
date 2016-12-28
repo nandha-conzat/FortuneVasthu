@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.rukina.fortunevasthu.R;
 import com.rukina.fortunevasthu.activity.FreeReportActivity;
 import com.rukina.fortunevasthu.activity.LoginActivity;
+import com.rukina.fortunevasthu.utils.PreferenceStorage;
 
 /**
  * Created by Nandha on 23-10-2016.
@@ -30,8 +31,8 @@ public class FreeAnalysisFragment extends Fragment {
     private RadioGroup radioMainEntranceGroup, radioHallGroup, radioKitchenGroup, radioMasterBedRoomGroup, radioBedRoomGroup,
             radioPoojaRoomGroup, radioBathGroup, radioPorticoGroup, radioCarParkingGroup, radioStairCaseGroup, radioSumpGroup,
             radioSepticTankGroup, radioCompoundWallGroup, radioRoadGroup;
-
     private Button btnGenerateReport;
+    private int count = 0;
 
     @Nullable
     @Override
@@ -59,53 +60,210 @@ public class FreeAnalysisFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                int selectedId_ME = radioMainEntranceGroup.getCheckedRadioButtonId();
-                int selectedId_Hall = radioHallGroup.getCheckedRadioButtonId();
-                int selectedId_Kitchen = radioKitchenGroup.getCheckedRadioButtonId();
-                int selectedId_MasterBed = radioMasterBedRoomGroup.getCheckedRadioButtonId();
-                int selectedId_BedRoom = radioBedRoomGroup.getCheckedRadioButtonId();
-                int selectedId_PoojaRoom = radioPoojaRoomGroup.getCheckedRadioButtonId();
-                int selectedId_Bath = radioBathGroup.getCheckedRadioButtonId();
-                int selectedId_Portico = radioPorticoGroup.getCheckedRadioButtonId();
-                int selectedId_CarParking = radioCarParkingGroup.getCheckedRadioButtonId();
-                int selectedId_StairCase = radioStairCaseGroup.getCheckedRadioButtonId();
-                int selectedId_Sump = radioSumpGroup.getCheckedRadioButtonId();
-                int selectedId_Septic = radioSepticTankGroup.getCheckedRadioButtonId();
-                int selectedId_Wall = radioCompoundWallGroup.getCheckedRadioButtonId();
-                int selectedId_Road = radioRoadGroup.getCheckedRadioButtonId();
+                if (radioMainEntranceGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveMainEntrance(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_ME = radioMainEntranceGroup.getCheckedRadioButtonId();
+                    RadioButton radioMainEntranceButton = (RadioButton) rootView.findViewById(selectedId_ME);
+                    PreferenceStorage.saveMainEntrance(getActivity(), radioMainEntranceButton.getText().toString());
+                }
 
-                RadioButton radioMainEntranceButton = (RadioButton) rootView.findViewById(selectedId_ME);
-                RadioButton radioHallButton = (RadioButton) rootView.findViewById(selectedId_Hall);
-                RadioButton radioKitchenButton = (RadioButton) rootView.findViewById(selectedId_Kitchen);
-                RadioButton radioMasterBedRoomButton = (RadioButton) rootView.findViewById(selectedId_MasterBed);
-                RadioButton radioBedRoomButton = (RadioButton) rootView.findViewById(selectedId_BedRoom);
-                RadioButton radioPoojaRoomButton = (RadioButton) rootView.findViewById(selectedId_PoojaRoom);
-                RadioButton radioBathButton = (RadioButton) rootView.findViewById(selectedId_Bath);
-                RadioButton radioPorticoButton = (RadioButton) rootView.findViewById(selectedId_Portico);
-                RadioButton radioCarParkingButton = (RadioButton) rootView.findViewById(selectedId_CarParking);
-                RadioButton radioStairCaseButton = (RadioButton) rootView.findViewById(selectedId_StairCase);
-                RadioButton radioSumpButton = (RadioButton) rootView.findViewById(selectedId_Sump);
-                RadioButton radioSepticButton = (RadioButton) rootView.findViewById(selectedId_Septic);
-                RadioButton radioWallButton = (RadioButton) rootView.findViewById(selectedId_Wall);
-                RadioButton radioRoadButton = (RadioButton) rootView.findViewById(selectedId_Road);
+                if (radioHallGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveHall(getActivity(), "");
+                }
+                else
+                {
 
-               /* Toast.makeText(getActivity(), "Main Ent :" + radioMainEntranceButton.getText() +
-                        "Hall :" + radioHallButton.getText() +
-                        "Kitchen :" + radioKitchenButton.getText() +
-                        "Master Bed :" + radioMasterBedRoomButton.getText() +
-                        "Bed :" + radioBedRoomButton.getText() +
-                        "Pooja :" + radioPoojaRoomButton.getText() +
-                        "Bath :" + radioBathButton.getText() +
-                        "Portico :" + radioPorticoButton.getText() +
-                        "Car :" + radioCarParkingButton.getText() +
-                        "StairCase :" + radioStairCaseButton.getText() +
-                        "Sump :" + radioSumpButton.getText() +
-                        "Septic :" + radioSepticButton.getText() +
-                        "Wall :" + radioWallButton.getText() +
-                        "Road :" + radioRoadButton.getText(), Toast.LENGTH_SHORT).show(); */
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_Hall = radioHallGroup.getCheckedRadioButtonId();
+                    RadioButton radioHallButton = (RadioButton) rootView.findViewById(selectedId_Hall);
+                    PreferenceStorage.saveHall(getActivity(), radioHallButton.getText().toString());
+                }
 
-                Intent myIntent = new Intent(getActivity(), FreeReportActivity.class);
-                getActivity().startActivity(myIntent);
+                if (radioKitchenGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveKitchen(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_Kitchen = radioKitchenGroup.getCheckedRadioButtonId();
+                    RadioButton radioKitchenButton = (RadioButton) rootView.findViewById(selectedId_Kitchen);
+                    PreferenceStorage.saveKitchen(getActivity(), radioKitchenButton.getText().toString());
+                }
+
+                if (radioMasterBedRoomGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveMasterBedRoom(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_MasterBed = radioMasterBedRoomGroup.getCheckedRadioButtonId();
+                    RadioButton radioMasterBedRoomButton = (RadioButton) rootView.findViewById(selectedId_MasterBed);
+                    PreferenceStorage.saveMasterBedRoom(getActivity(), radioMasterBedRoomButton.getText().toString());
+                }
+
+                if (radioBedRoomGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveBedRoom(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_BedRoom = radioBedRoomGroup.getCheckedRadioButtonId();
+                    RadioButton radioBedRoomButton = (RadioButton) rootView.findViewById(selectedId_BedRoom);
+                    PreferenceStorage.saveBedRoom(getActivity(), radioBedRoomButton.getText().toString());
+                }
+
+                if (radioPoojaRoomGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.savePoojaRoom(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_PoojaRoom = radioPoojaRoomGroup.getCheckedRadioButtonId();
+                    RadioButton radioPoojaRoomButton = (RadioButton) rootView.findViewById(selectedId_PoojaRoom);
+                    PreferenceStorage.savePoojaRoom(getActivity(), radioPoojaRoomButton.getText().toString());
+                }
+
+                if (radioBathGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveBathAndToilet(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_Bath = radioBathGroup.getCheckedRadioButtonId();
+                    RadioButton radioBathButton = (RadioButton) rootView.findViewById(selectedId_Bath);
+                    PreferenceStorage.saveBathAndToilet(getActivity(), radioBathButton.getText().toString());
+                }
+
+                if (radioPorticoGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.savePortico(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_Portico = radioPorticoGroup.getCheckedRadioButtonId();
+                    RadioButton radioPorticoButton = (RadioButton) rootView.findViewById(selectedId_Portico);
+                    PreferenceStorage.savePortico(getActivity(), radioPorticoButton.getText().toString());
+                }
+
+                if (radioCarParkingGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveCarParking(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_CarParking = radioCarParkingGroup.getCheckedRadioButtonId();
+                    RadioButton radioCarParkingButton = (RadioButton) rootView.findViewById(selectedId_CarParking);
+                    PreferenceStorage.saveCarParking(getActivity(), radioCarParkingButton.getText().toString());
+                }
+
+                if (radioStairCaseGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveStairCase(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_StairCase = radioStairCaseGroup.getCheckedRadioButtonId();
+                    RadioButton radioStairCaseButton = (RadioButton) rootView.findViewById(selectedId_StairCase);
+                    PreferenceStorage.saveStairCase(getActivity(), radioStairCaseButton.getText().toString());
+                }
+
+                if (radioSumpGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveSumpBorewell(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_Sump = radioSumpGroup.getCheckedRadioButtonId();
+                    RadioButton radioSumpButton = (RadioButton) rootView.findViewById(selectedId_Sump);
+                    PreferenceStorage.saveSumpBorewell(getActivity(), radioSumpButton.getText().toString());
+                }
+
+                if (radioSepticTankGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveSepticTank(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_Septic = radioSepticTankGroup.getCheckedRadioButtonId();
+                    RadioButton radioSepticButton = (RadioButton) rootView.findViewById(selectedId_Septic);
+                    PreferenceStorage.saveSepticTank(getActivity(), radioSepticButton.getText().toString());
+                }
+
+                if (radioCompoundWallGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveCompoundWall(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_Wall = radioCompoundWallGroup.getCheckedRadioButtonId();
+                    RadioButton radioWallButton = (RadioButton) rootView.findViewById(selectedId_Wall);
+                    PreferenceStorage.saveCompoundWall(getActivity(), radioWallButton.getText().toString());
+                }
+
+                if (radioRoadGroup.getCheckedRadioButtonId() == -1)
+                {
+                    // no radio buttons are checked
+                    PreferenceStorage.saveRoad(getActivity(), "");
+                }
+                else
+                {
+                    // one of the radio buttons is checked
+                    count = count+1;
+                    int selectedId_Road = radioRoadGroup.getCheckedRadioButtonId();
+                    RadioButton radioRoadButton = (RadioButton) rootView.findViewById(selectedId_Road);
+                    PreferenceStorage.saveRoad(getActivity(), radioRoadButton.getText().toString());
+                }
+
+                if (count >= 4) {
+
+                    Intent myIntent = new Intent(getActivity(), LoginActivity.class);
+                    getActivity().startActivity(myIntent);
+                } else {
+                    Toast.makeText(getActivity(), "Please choose atleast 4 selection !", Toast.LENGTH_LONG).show();
+                }
 
             }
         });

@@ -3,17 +3,20 @@ package com.rukina.fortunevasthu.serviceshelper;
 import android.content.Context;
 import android.util.Log;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.rukina.fortunevasthu.R;
+import com.rukina.fortunevasthu.activity.LoginActivity;
 import com.rukina.fortunevasthu.activity.MainActivity;
 import com.rukina.fortunevasthu.app.AppController;
+import com.rukina.fortunevasthu.serviceinterfaces.IForgotPasswordServiceListener;
 import com.rukina.fortunevasthu.serviceinterfaces.IServiceListener;
 import com.rukina.fortunevasthu.serviceinterfaces.ISignUpServiceListener;
-import com.rukina.fortunevasthu.utils.Config;
 import com.rukina.fortunevasthu.utils.FortuneConstants;
 
 
@@ -21,15 +24,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * Created by zahid.r on 10/30/2015.
  */
 public class SignUpServiceHelper {
-    private String TAG = MainActivity.class.getSimpleName();
+    private String TAG = LoginActivity.class.getSimpleName();
     private Context context;
     ISignUpServiceListener signUpServiceListener;
-
+    IForgotPasswordServiceListener forgotPasswordServiceListener;
 
     public SignUpServiceHelper(Context context) {
         this.context = context;
@@ -37,6 +42,54 @@ public class SignUpServiceHelper {
 
     public void setSignUpServiceListener(ISignUpServiceListener signUpServiceListener) {
         this.signUpServiceListener = signUpServiceListener;
+    }
+
+    public void setForgotPasswordServiceListener(IForgotPasswordServiceListener forgotPasswordServiceListener) {
+        this.forgotPasswordServiceListener = forgotPasswordServiceListener;
+    }
+
+    public void makeSignUpServiceCall(String params) {
+        Log.d(TAG,"making sign in request"+ params);
+        final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
+                FortuneConstants.APP_SERVER_URL, params,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d(TAG, response.toString());
+                        signUpServiceListener.onSignUp(response);
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                if (error.networkResponse != null && error.networkResponse.data != null) {
+                    Log.d(TAG,"error during sign up"+ error.getLocalizedMessage());
+
+                    try {
+                        String responseBody = new String(error.networkResponse.data, "utf-8");
+                        JSONObject jsonObject = new JSONObject(responseBody);
+                        signUpServiceListener.onSignUpError(jsonObject.getString(FortuneConstants.PARAM_MESSAGE));
+                        String status = jsonObject.getString("status");
+                        Log.d(TAG, "signup status is" + status);
+                    } catch (UnsupportedEncodingException e) {
+                        signUpServiceListener.onSignUpError(context.getResources().getString(R.string.error_occured));
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        signUpServiceListener.onSignUpError(context.getResources().getString(R.string.error_occured));
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    signUpServiceListener.onSignUpError(context.getResources().getString(R.string.error_occured));
+                }
+            }
+        });
+
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        // Adding request to request queue
+        AppController.getInstance().addToRequestQueue(jsonObjectRequest);
     }
 
     public void makeGetEventServiceCall(String URL) {
@@ -63,7 +116,7 @@ public class SignUpServiceHelper {
                         String responseBody = new String(error.networkResponse.data, "utf-8");
                         Log.d(TAG, "error response body is" + responseBody);
                         JSONObject jsonObject = new JSONObject(responseBody);
-                        signUpServiceListener.onSignUpError(jsonObject.getString(Config.PARAM_MESSAGE));
+                        signUpServiceListener.onSignUpError(jsonObject.getString(FortuneConstants.PARAM_MESSAGE));
                     } catch (UnsupportedEncodingException e) {
                         signUpServiceListener.onSignUpError(context.getResources().getString(R.string.error_occured));
                         e.printStackTrace();
@@ -82,7 +135,6 @@ public class SignUpServiceHelper {
 
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(jsonObjectRequest);
-
 
     }
 
@@ -133,6 +185,97 @@ public class SignUpServiceHelper {
 
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(jsonObjectRequest);
+    }
+
+    public void uploadUserImage(String url, final String image, final IServiceListener listener){
+        Log.d(TAG,"uploading user image"+ url);
+        // StringRequest request = new StringRequest(Request.Method.POST,url,params,new Res)
+
+        //Showing the progress dialog
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String s) {
+                        //Disimissing the progress dialog
+                        Log.d(TAG, "Succesfully uploaded the image"+ s);
+                        listener.onSuccess(0,s);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        //Dismissing the progress dialog
+                        Log.e(TAG,"error loading image"+ volleyError.getLocalizedMessage());
+                        listener.onError(volleyError.getLocalizedMessage());
+                    }
+                }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                //Converting Bitmap to String
+                Log.d(TAG,"getting image parameters");
+
+
+                //Creating parameters
+                Map<String,String> params = new Hashtable<String, String>();
+
+                //Adding parameters
+                params.put("fileToUpload", image);
+                params.put("name", "hobistan.jpg");
+
+                //returning parameters
+                return params;
+            }
+        };
+
+        //Creating a Request Queue
+        AppController.getInstance().addToRequestQueue(stringRequest);
+    }
+
+    public void makeForgotPasswordServiceCall(String params) {
+        Log.d(TAG,"making forgot password request"+ params);
+        final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
+                FortuneConstants.GET_SIGN_UP_URL, params,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d(TAG, response.toString());
+                        forgotPasswordServiceListener.onForgotPassword(response);
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                if (error.networkResponse != null && error.networkResponse.data != null) {
+                    Log.d(TAG,"error during sign up"+ error.getLocalizedMessage());
+
+                    try {
+                        String responseBody = new String(error.networkResponse.data, "utf-8");
+                        JSONObject jsonObject = new JSONObject(responseBody);
+                        forgotPasswordServiceListener.onForgotPasswordError(jsonObject.getString(FortuneConstants.PARAM_MESSAGE));
+                        String status = jsonObject.getString("status");
+                        Log.d(TAG, "forgot password status is" + status);
+                    } catch (UnsupportedEncodingException e) {
+                        forgotPasswordServiceListener.onForgotPasswordError(context.getResources().getString(R.string.error_occured));
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        forgotPasswordServiceListener.onForgotPasswordError(context.getResources().getString(R.string.error_occured));
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    forgotPasswordServiceListener.onForgotPasswordError(context.getResources().getString(R.string.error_occured));
+                }
+            }
+        });
+
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        // Adding request to request queue
+        AppController.getInstance().addToRequestQueue(jsonObjectRequest);
+
     }
 
 }

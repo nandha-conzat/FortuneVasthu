@@ -17,7 +17,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -37,8 +36,9 @@ import com.rukina.fortunevasthu.serviceinterfaces.ISignUpServiceListener;
 import com.rukina.fortunevasthu.serviceshelper.GCMRegistrationIntentService;
 import com.rukina.fortunevasthu.serviceshelper.SignUpServiceHelper;
 import com.rukina.fortunevasthu.utils.CommonUtils;
-import com.rukina.fortunevasthu.utils.Config;
+import com.rukina.fortunevasthu.utils.FortuneConstants;
 import com.rukina.fortunevasthu.utils.FortuneValidator;
+import com.rukina.fortunevasthu.utils.PreferenceStorage;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -54,11 +54,12 @@ import java.net.URLEncoder;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, ISignUpServiceListener, DialogClickListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private static final String TAG = LoginActivity.class.getName();
-    private static final int RC_SIGN_IN = 0;
-    private static final int REQUEST_CODE_TOKEN_AUTH = 1;
     EditText _Name, _Email, _Mobile;
     private TextInputLayout inputEmployeeName, inputLayoutEmail, inputLayoutMobile;
     Button _Submit,_Clear;
+
+    private static final int RC_SIGN_IN = 0;
+    private static final int REQUEST_CODE_TOKEN_AUTH = 1;
     private ProgressDialogHelper progressDialogHelper;
     private SignUpServiceHelper signUpServiceHelper;
     private ConnectionResult mConnectionResult;
@@ -81,6 +82,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
+        init();
+
+        Toast.makeText(getApplicationContext(), "Please register to get the vasthu report !", Toast.LENGTH_LONG).show();
+    }
+
+    private void init()
+    {
+        _Name = (EditText) findViewById(R.id.et_name);
+        _Email = (EditText) findViewById(R.id.et_Email);
+        _Mobile = (EditText) findViewById(R.id.et_mobile);
+        _Submit = (Button) findViewById(R.id.btn_submit);
+        _Submit.setOnClickListener(this);
+        _Clear = (Button) findViewById(R.id.btn_clear);
+        _Clear.setOnClickListener(this);
+
+        inputEmployeeName = (TextInputLayout) findViewById(R.id.input_layout_name);
+        inputLayoutEmail = (TextInputLayout) findViewById(R.id.input_layout_email);
+        inputLayoutMobile = (TextInputLayout) findViewById(R.id.input_layout_mobile);
 
         signUpServiceHelper = new SignUpServiceHelper(this);
         signUpServiceHelper.setSignUpServiceListener(this);
@@ -136,45 +156,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Intent itent = new Intent(this, GCMRegistrationIntentService.class);
             startService(itent);
         }
-
-        init();
-
-        Toast.makeText(getApplicationContext(), "Please register to get the vasthu report !", Toast.LENGTH_LONG).show();
-    }
-
-    private void init()
-    {
-        _Name = (EditText) findViewById(R.id.et_name);
-        _Email = (EditText) findViewById(R.id.et_Email);
-        _Mobile = (EditText) findViewById(R.id.et_mobile);
-        _Submit = (Button) findViewById(R.id.btn_submit);
-        _Submit.setOnClickListener(this);
-        _Clear = (Button) findViewById(R.id.btn_clear);
-        _Clear.setOnClickListener(this);
-
-        inputEmployeeName = (TextInputLayout) findViewById(R.id.input_layout_name);
-        inputLayoutEmail = (TextInputLayout) findViewById(R.id.input_layout_email);
-        inputLayoutMobile = (TextInputLayout) findViewById(R.id.input_layout_mobile);
-    }
-
-    //Registering receiver on activity resume
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.w("SplashScreen", "onResume");
-        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
-                new IntentFilter(GCMRegistrationIntentService.REGISTRATION_SUCCESS));
-        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
-                new IntentFilter(GCMRegistrationIntentService.REGISTRATION_ERROR));
-    }
-
-
-    //Unregistering receiver on activity paused
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.w("SplashScreen", "onPause");
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
     }
 
     @Override
@@ -191,7 +172,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         //String url = "http://stackoverflow.com/search?q=" + query;
 
                         progressDialogHelper.showProgressDialog(getString(R.string.progress_loading));
-                        signUpServiceHelper.makeGetEventServiceCall(String.format(Config.REG_USER, query, Mobile, Email, regId));
+                        //signUpServiceHelper.makeGetEventServiceCall(String.format(FortuneConstants.REG_USER, query, Mobile,Email, regId));
+
+                        signUpServiceHelper.makeGetEventServiceCall(String.format(FortuneConstants.GET_FREE_REPORT,
+                                PreferenceStorage.getMainEntrance(getApplicationContext()),PreferenceStorage.getHall(getApplicationContext()),
+                                PreferenceStorage.getKitchen(getApplicationContext()),PreferenceStorage.getMasterBedRoom(getApplicationContext()),
+                                PreferenceStorage.getBedRoom(getApplicationContext()),PreferenceStorage.getPoojaRoom(getApplicationContext()),
+                                PreferenceStorage.getBathAndToilet(getApplicationContext()),PreferenceStorage.getPortico(getApplicationContext()),
+                                PreferenceStorage.getCarParking(getApplicationContext()),PreferenceStorage.getStairCase(getApplicationContext()),
+                                PreferenceStorage.getSumpBorewell(getApplicationContext()),PreferenceStorage.getSepticTank(getApplicationContext()),
+                                PreferenceStorage.getCompoundWall(getApplicationContext()),PreferenceStorage.getRoad(getApplicationContext()),query, Mobile,Email, regId));
+
 
                     } catch (UnsupportedEncodingException ex) {
                         ex.printStackTrace();
@@ -207,6 +198,51 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         } else {
             AlertDialogHelper.showSimpleAlertDialog(this, "No Network connection");
         }
+    }
+
+   private boolean validateFields() {
+        if (!FortuneValidator.checkNullString(this._Name.getText().toString().trim())) {
+            AlertDialogHelper.showSimpleAlertDialog(this, this.getResources().getString(R.string.fill_name));
+            return false;
+        } else if (!FortuneValidator.checkNullString(this._Email.getText().toString().trim())) {
+            AlertDialogHelper.showSimpleAlertDialog(this, this.getResources().getString(R.string.fill_mobileno));
+            return false;
+        } else if (!FortuneValidator.checkNullString(this._Mobile.getText().toString())) {
+            AlertDialogHelper.showSimpleAlertDialog(this, this.getResources().getString(R.string.fill_email));
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //Registering receiver on activity resume
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.w("SplashScreen", "onResume");
+        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
+                new IntentFilter(GCMRegistrationIntentService.REGISTRATION_SUCCESS));
+        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
+                new IntentFilter(GCMRegistrationIntentService.REGISTRATION_ERROR));
+    }
+
+    //Unregistering receiver on activity paused
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.w("SplashScreen", "onPause");
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        mSignInClicked = false;
+        Log.d(TAG, "OnCOnnected");
+
+        // Hide the progress dialog if its showing.
+        // Toast.makeText(this, "User is connected !", Toast.LENGTH_SHORT).show();
+        // Get user's information
+        progressDialogHelper.showProgressDialog("Signing in...");
     }
 
     @Override
@@ -238,18 +274,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-
-    @Override
-    public void onConnected(Bundle bundle) {
-        mSignInClicked = false;
-        Log.d(TAG, "OnCOnnected");
-
-        // Hide the progress dialog if its showing.
-        // Toast.makeText(this, "User is connected !", Toast.LENGTH_SHORT).show();
-        // Get user's information
-        progressDialogHelper.showProgressDialog("Signing in...");
-    }
-
     @Override
     public void onConnectionSuspended(int i) {
         progressDialogHelper.hideProgressDialog();
@@ -279,6 +303,72 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    @Override
+    public void onAlertPositiveClicked(int tag) {
+
+    }
+
+    @Override
+    public void onAlertNegativeClicked(int tag) {
+
+    }
+
+    @Override
+    public void onSignUp(JSONObject response) {
+        progressDialogHelper.hideProgressDialog();
+        if (validateSignInResponse(response)) {
+
+           /* String Name = _Name.getText().toString().trim();
+            String Mobile = _Mobile.getText().toString().trim();
+            String Email = _Email.getText().toString().trim();
+
+            try {
+                String query = URLEncoder.encode(Name, "utf-8");
+                //String url = "http://stackoverflow.com/search?q=" + query;
+
+                progressDialogHelper.showProgressDialog(getString(R.string.progress_loading));
+                signUpServiceHelper.makeGetEventServiceCall(String.format(FortuneConstants.GET_FREE_REPORT,
+                        PreferenceStorage.getMainEntrance(getApplicationContext()),PreferenceStorage.getHall(getApplicationContext()),
+                        PreferenceStorage.getKitchen(getApplicationContext()),PreferenceStorage.getMasterBedRoom(getApplicationContext()),
+                        PreferenceStorage.getBedRoom(getApplicationContext()),PreferenceStorage.getPoojaRoom(getApplicationContext()),
+                        PreferenceStorage.getBathAndToilet(getApplicationContext()),PreferenceStorage.getPortico(getApplicationContext()),
+                        PreferenceStorage.getCarParking(getApplicationContext()),PreferenceStorage.getStairCase(getApplicationContext()),
+                        PreferenceStorage.getSumpBorewell(getApplicationContext()),PreferenceStorage.getSepticTank(getApplicationContext()),
+                        PreferenceStorage.getCompoundWall(getApplicationContext()),PreferenceStorage.getRoad(getApplicationContext()),query, Mobile,Email, regId));
+
+
+            } catch (UnsupportedEncodingException ex) {
+                ex.printStackTrace();
+            } */
+
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Registration Successful");
+
+
+            alertDialogBuilder.setMessage("Thank you for registration !");
+            alertDialogBuilder.setPositiveButton("OK",
+                    new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            Intent intent = new Intent(LoginActivity.this, FreeReportActivity.class);
+                            startActivity(intent);
+                            finish();
+
+                        }
+                    });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+        }
+    }
+
+    @Override
+    public void onSignUpError(String error) {
+        progressDialogHelper.hideProgressDialog();
+        AlertDialogHelper.showSimpleAlertDialog(this, error);
+    }
+
     /**
      * Method to resolve any signin errors
      */
@@ -301,7 +391,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if ((response != null)) {
             try {
                 String status = response.getString("status");
-                String msg = response.getString(Config.PARAM_MESSAGE);
+                String msg = response.getString(FortuneConstants.PARAM_MESSAGE);
                 Log.d(TAG, "status val" + status + "msg" + msg);
 
                 if ((status != null)) {
@@ -315,9 +405,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                                         @Override
                                         public void onClick(DialogInterface arg0, int arg1) {
-                                          //  Intent intent = new Intent(Register.this, Login.class);
-                                         //   startActivity(intent);
-                                          //  finish();
+                                            Intent intent = new Intent(LoginActivity.this, FreeReportActivity.class);
+                                            startActivity(intent);
+                                            finish();
                                         }
                                     });
 
@@ -340,64 +430,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         return signInsuccess;
     }
 
-   private boolean validateFields() {
-        if (!FortuneValidator.checkNullString(this._Name.getText().toString().trim())) {
-            AlertDialogHelper.showSimpleAlertDialog(this, this.getResources().getString(R.string.fill_name));
-            return false;
-        } else if (!FortuneValidator.checkNullString(this._Email.getText().toString().trim())) {
-            AlertDialogHelper.showSimpleAlertDialog(this, this.getResources().getString(R.string.fill_mobileno));
-            return false;
-        } else if (!FortuneValidator.checkNullString(this._Mobile.getText().toString())) {
-            AlertDialogHelper.showSimpleAlertDialog(this, this.getResources().getString(R.string.fill_email));
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    @Override
-    public void onAlertPositiveClicked(int tag) {
-
-    }
-
-    @Override
-    public void onAlertNegativeClicked(int tag) {
-
-    }
-
-    @Override
-    public void onSignUp(JSONObject response) {
-        progressDialogHelper.hideProgressDialog();
-        if (validateSignInResponse(response)) {
-
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle("Registration Successful");
-
-
-            alertDialogBuilder.setMessage("Perform Sign In");
-            alertDialogBuilder.setPositiveButton("OK",
-                    new DialogInterface.OnClickListener() {
-
-                        @Override
-                        public void onClick(DialogInterface arg0, int arg1) {
-                            //Intent intent = new Intent(Register.this, Login.class);
-                            //startActivity(intent);
-                            //finish();
-
-                        }
-                    });
-
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
-        }
-    }
-
-    @Override
-    public void onSignUpError(String error) {
-        progressDialogHelper.hideProgressDialog();
-        AlertDialogHelper.showSimpleAlertDialog(this, error);
-    }
-
     private String getRegistrationId(Context context) {
         final SharedPreferences prefs = getSharedPreferences(
                 MainActivity.class.getSimpleName(), Context.MODE_PRIVATE);
@@ -413,26 +445,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return "";
         }
         return registrationId;
-    }
-
-    public String registerGCM() {
-
-        gcm = GoogleCloudMessaging.getInstance(this);
-        regId = getRegistrationId(context);
-
-        if (TextUtils.isEmpty(regId)) {
-
-            registerInBackground();
-
-            Log.d("RegisterActivity",
-                    "registerGCM - successfully registered with GCM server - regId: "
-                            + regId);
-        } else {
-            Toast.makeText(getApplicationContext(),
-                    "RegId already available. RegId: " + regId,
-                    Toast.LENGTH_LONG).show();
-        }
-        return regId;
     }
 
     private static int getAppVersion(Context context) {
@@ -456,7 +468,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     if (gcm == null) {
                         gcm = GoogleCloudMessaging.getInstance(context);
                     }
-                    regId = gcm.register(Config.GOOGLE_PROJECT_ID);
+                    regId = gcm.register(FortuneConstants.GOOGLE_PROJECT_ID);
                     Log.d("RegisterActivity", "registerInBackground - regId: "
                             + regId);
                     msg = "Device registered, registration ID=" + regId;
@@ -489,5 +501,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editor.putInt(APP_VERSION, appVersion);
         editor.commit();
     }
-
 }

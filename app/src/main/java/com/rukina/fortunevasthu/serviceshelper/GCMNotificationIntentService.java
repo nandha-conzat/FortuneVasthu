@@ -14,7 +14,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.rukina.fortunevasthu.R;
 import com.rukina.fortunevasthu.activity.MainActivity;
 import com.rukina.fortunevasthu.broadcastreceiver.GcmBroadcastReceiver;
-import com.rukina.fortunevasthu.utils.Config;
+import com.rukina.fortunevasthu.utils.FortuneConstants;
 
 public class GCMNotificationIntentService extends IntentService {
 
@@ -57,10 +57,9 @@ public class GCMNotificationIntentService extends IntentService {
                 Log.i(TAG, "Completed work @ " + SystemClock.elapsedRealtime());
 
                 sendNotification("Message Received from Google GCM Server: "
-                        + extras.get(Config.MESSAGE_KEY));
+                        + extras.get(FortuneConstants.MESSAGE_KEY));
                 Log.i(TAG, "Received: " + extras.toString());
             }
-
         }
         GcmBroadcastReceiver.completeWakefulIntent(intent);
     }

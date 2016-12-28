@@ -91,10 +91,11 @@
                                 android:id="@+id/radioNE_ME"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
+
+                            <!--android:checked="true"-->
 
                             <RadioButton
                                 android:id="@+id/radioSE_ME"
@@ -126,51 +127,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -241,7 +197,6 @@
                                 android:id="@+id/radioNE_Hall"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -276,52 +231,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -390,7 +299,6 @@
                                 android:id="@+id/radioNE_Kitchen"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -425,52 +333,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -539,7 +401,6 @@
                                 android:id="@+id/radioNE_MasterBed"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -574,52 +435,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -688,7 +503,6 @@
                                 android:id="@+id/radioNE_BedRoom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -723,51 +537,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -836,7 +605,6 @@
                                 android:id="@+id/radioNE_PoojaRoom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -871,52 +639,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -985,7 +707,6 @@
                                 android:id="@+id/radioNE_Bath"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1020,52 +741,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1134,7 +809,6 @@
                                 android:id="@+id/radioNE_Portico"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1169,52 +843,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1283,7 +911,6 @@
                                 android:id="@+id/radioNE_CarPark"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1318,52 +945,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1432,7 +1013,6 @@
                                 android:id="@+id/radioNE_StairCase"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1467,52 +1047,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1582,7 +1116,6 @@
                                 android:id="@+id/radioNE_Sump"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1617,51 +1150,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1730,7 +1218,6 @@
                                 android:id="@+id/radioNE_Septic"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1765,51 +1252,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -1878,7 +1320,6 @@
                                 android:id="@+id/radioNE_Wall"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -1913,51 +1354,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -2026,7 +1422,6 @@
                                 android:id="@+id/radioNE_Road"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="NE"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
@@ -2061,51 +1456,6 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="10dp" />
                         </RadioGroup>
-
-                        <!--<CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_weight="0.25"
-                            android:text="SW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NW"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="NE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="0.25"
-                            android:text="SE"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="10dp" />-->
-
-
-                        <!---->
 
                     </LinearLayout>
                 </RelativeLayout>

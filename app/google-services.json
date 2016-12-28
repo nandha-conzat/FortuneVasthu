@@ -15,31 +15,26 @@
       },
       "oauth_client": [
         {
-          "client_id": "789502099085-5rr3ie1r6uido78shbab99p29os6bqg9.apps.googleusercontent.com",
+          "client_id": "789502099085-2stt98lpm0rk7gcv9fna3sjringqvb4l.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.rukina.fortunevasthu",
-            "certificate_hash": "01C145F658E576A6C2E517A98372462AF2B352D4"
+            "certificate_hash": "2B6EEF2ADCF16C0C2AB34235C7429B4D970A51E1"
           }
-        },
-        {
-          "client_id": "789502099085-4j2bm7bvk3p2notfmgbnq58ddld61qcm.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
-      "api_key": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwqIOhP2mXIjR9kkNjMItO9JHVGlSn8MA"
+        }
+      ],
       "services": {
         "analytics_service": {
           "status": 1
         },
         "appinvite_service": {
           "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "789502099085-4j2bm7bvk3p2notfmgbnq58ddld61qcm.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
